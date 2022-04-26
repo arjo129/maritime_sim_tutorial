@@ -1,0 +1,4 @@
+{
+    "hooks": ["share/lrauv_ignition_plugins/hooks/hook.dsv"]
+}
+
