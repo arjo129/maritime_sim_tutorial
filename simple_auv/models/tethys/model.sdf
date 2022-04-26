@@ -16,6 +16,7 @@
       </inertial>
 
       <collision name="main_body_buoyancy">
+        <pose>0 0 0.007 0 0 0</pose>
         <geometry>
           <box>
             <size>2 0.3 0.246445166667</size>
