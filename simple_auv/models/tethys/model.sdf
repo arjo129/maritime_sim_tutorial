@@ -34,9 +34,10 @@
           </mesh>
         </geometry>
         <material>
-          <diffuse>1.0 1.0 1.0</diffuse>
-          <specular>1.0 1.0 1.0</specular>
-          <pbr>
+          <ambient>1 1 0 1</ambient>
+          <diffuse>1 1 0 1</diffuse>
+          <specular>1 1 0 1</specular>
+          <!--<pbr>
             <metal>
               <albedo_map>materials/textures/Tethys_Albedo.png</albedo_map>
               <normal_map>materials/textures/Tethys_Normal.png</normal_map>
@@ -48,7 +49,7 @@
             <uri>materials/scripts/</uri>
             <uri>materials/textures/</uri>
             <name>tethys/Tethys_Diffuse</name>
-          </script>
+          </script>-->
         </material>
       </visual>
     </link>
@@ -89,21 +90,9 @@
           </mesh>
         </geometry>
         <material>
-          <diffuse>1.0 1.0 1.0</diffuse>
-          <specular>1.0 1.0 1.0</specular>
-          <pbr>
-            <metal>
-              <albedo_map>materials/textures/Tethys_Albedo.png</albedo_map>
-              <normal_map>materials/textures/Tethys_Normal.png</normal_map>
-              <metalness_map>materials/textures/Tethys_Metalness.png</metalness_map>
-              <roughness_map>materials/textures/Tethys_Roughness.png</roughness_map>
-            </metal>
-          </pbr>
-          <script>
-            <uri>materials/scripts/</uri>
-            <uri>materials/textures/</uri>
-            <name>tethys/Tethys_Diffuse</name>
-          </script>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>1 0 0 1</specular>
         </material>
       </visual>
     </link>
@@ -143,21 +132,9 @@
           </mesh>
         </geometry>
         <material>
-          <diffuse>1.0 1.0 1.0</diffuse>
-          <specular>1.0 1.0 1.0</specular>
-          <pbr>
-            <metal>
-              <albedo_map>materials/textures/Tethys_Albedo.png</albedo_map>
-              <normal_map>materials/textures/Tethys_Normal.png</normal_map>
-              <metalness_map>materials/textures/Tethys_Metalness.png</metalness_map>
-              <roughness_map>materials/textures/Tethys_Roughness.png</roughness_map>
-            </metal>
-          </pbr>
-          <script>
-            <uri>materials/scripts/</uri>
-            <uri>materials/textures/</uri>
-            <name>tethys/Tethys_Diffuse</name>
-          </script>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>1 0 0 1</specular>
         </material>
       </visual>
     </link>
@@ -198,21 +175,9 @@
           </mesh>
         </geometry>
         <material>
-          <diffuse>1.0 1.0 1.0</diffuse>
-          <specular>1.0 1.0 1.0</specular>
-          <pbr>
-            <metal>
-              <albedo_map>materials/textures/Tethys_Albedo.png</albedo_map>
-              <normal_map>materials/textures/Tethys_Normal.png</normal_map>
-              <metalness_map>materials/textures/Tethys_Metalness.png</metalness_map>
-              <roughness_map>materials/textures/Tethys_Roughness.png</roughness_map>
-            </metal>
-          </pbr>
-          <script>
-            <uri>materials/scripts/</uri>
-            <uri>materials/textures/</uri>
-            <name>tethys/Tethys_Diffuse</name>
-          </script>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
         </material>
       </visual>
 
