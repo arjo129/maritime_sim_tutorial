@@ -1,5 +1,5 @@
 <sdf version="1.6">
-  <world name="water world">
+  <world name="waterworld">
     <include>
       <pose>0 0 0 0 0 0</pose>
       <uri>tethys</uri>
