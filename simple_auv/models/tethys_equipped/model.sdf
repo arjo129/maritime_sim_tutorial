@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="tethys">
+    <include merge="true">
+      <uri>tethys</uri>
+    </include>
+  </model>
+</sdf>
