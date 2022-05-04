@@ -29,5 +29,16 @@
         <nRR>-632.698957</nRR>
         <nR>0</nR>
     </plugin>
+
+    <!-- Thruster plugin -->
+    <plugin
+      filename="ignition-gazebo-thruster-system"
+      name="ignition::gazebo::systems::Thruster">
+      <namespace>tethys</namespace>
+      <joint_name>propeller_joint</joint_name>
+      <thrust_coefficient>0.004422</thrust_coefficient>
+      <fluid_density>1000</fluid_density>
+      <propeller_diameter>0.2</propeller_diameter>
+    </plugin>
   </model>
 </sdf>
