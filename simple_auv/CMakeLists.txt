@@ -18,6 +18,13 @@ configure_file(
 # Unit tests
 include(CTest)
 if(BUILD_TESTING)
+
+  # Build-time constants
+  set(PROJECT_BINARY_PATH ${CMAKE_CURRENT_BINARY_DIR})
+  set(PROJECT_SOURCE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
+  configure_file(tests/TestConfig.hh.in TestConfig.hh @ONLY)
+
+  # Get google tests
   include(FetchContent)
   FetchContent_Declare(
     googletest
@@ -27,6 +34,7 @@ if(BUILD_TESTING)
   FetchContent_MakeAvailable(googletest)
   include(GoogleTest)
 
+  # Add executables
   add_executable(test_stationary tests/test_stationary.cc)
   target_include_directories(test_stationary
     PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
