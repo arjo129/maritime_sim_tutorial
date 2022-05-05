@@ -77,11 +77,11 @@ This tells colcon that when we perform `. install/setup.bash` we need to export 
 Now press run and see what happens. You should see the vehicle falling. This is because of gravity if you look in the world file ignition has not been told what forces to simulate. In the next few steps we will add fidelity to the simulation.
 
 # Adding Basic Physics
+The forces on the AUV are as follows:
+![forces](images/mbari_forces.png)
 
 ## Adding Buoyancy
 We are going to add a buoyancy plugin to this world to stop this from falling.
-
-
 
 To do so open up "water_world.sdf" and add the following under the world tag:
 ```xml
@@ -120,7 +120,7 @@ Now when you enter `colcon build` and `ign gazebo water_world.sdf --render-engin
 
 ## Restoring Moments
 For a submarine we need to make sure that there are restoring moments. These make sure that the submarine can correct itself if subject to a torque if it is. 
-![stabiulity.png](attachment:stab7.png)
+![stabiulity.png](images/stab7.png)
 
 Lets test this behaviour. Create a copy of `water_world.sdf` and call it `restoring_moments.sdf`. Change the pose of the vehicle to be slightly tilted.
 ```xml
