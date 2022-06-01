@@ -34,10 +34,9 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>1 1 0 1</ambient>
-          <diffuse>1 1 0 1</diffuse>
-          <specular>1 1 0 1</specular>
-          <!--<pbr>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <pbr>
             <metal>
               <albedo_map>materials/textures/Tethys_Albedo.png</albedo_map>
               <normal_map>materials/textures/Tethys_Normal.png</normal_map>
@@ -49,7 +48,7 @@
             <uri>materials/scripts/</uri>
             <uri>materials/textures/</uri>
             <name>tethys/Tethys_Diffuse</name>
-          </script>-->
+          </script>
         </material>
       </visual>
     </link>
