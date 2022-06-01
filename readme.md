@@ -77,6 +77,7 @@ Now press run and see what happens. You should see the vehicle falling. This is 
 # Adding Basic Physics
 The forces on the AUV are as follows:
 ![forces](images/mbari_forces.png)
+In gazebo, we can use plugins to model various behaviours. For instance, for the buoyancy we have a `Buoyancy` plugin. Similarly there are plugins for thrusters and for drag (Hydrodynamic Damping) and many more behaviours.
 
 ## Adding Buoyancy
 We are going to add a buoyancy plugin to this world to stop this from falling.
@@ -117,7 +118,7 @@ This lods the physics system, the user command system which is used for interact
 Now when you enter `colcon build` and `ign gazebo water_world.sdf --render-engine` you will see the full screen. If you hit run your robot will no longer be in free fall instead you should see nothing happen. This is ok because the only forces are gravity and buoyancy.
 
 ## Restoring Moments
-For a submarine we need to make sure that there are restoring moments. These make sure that the submarine can correct itself if subject to a torque if it is. 
+For a submarine we need to make sure that there are restoring moments. These make sure that the submarine can correct itself if subject to a torque if it is tilted. 
 ![stabiulity.png](images/stab7.png)
 
 Lets test this behaviour. Create a copy of `water_world.sdf` and call it `restoring_moments.sdf`. Change the pose of the vehicle to be slightly tilted.
@@ -127,7 +128,7 @@ Lets test this behaviour. Create a copy of `water_world.sdf` and call it `restor
       <uri>tethys</uri>
     </include>
 ```
-Run this and you should see a slightly tilted vehicle that stays tilted this is the wrong behaviour. We will need to tweak the buoyancy. For now buoyancy is calculated using the collision meshes making it a bit messy. We will tweak the model. Open `tethys/model/sdf` and move the collision up by a bit so that the center of buoyancy and center of gravity are different. Apply the following patch to do so. We will now see the model rock back and forth.
+Run this and you should see a slightly tilted vehicle that stays tilted. This is the wrong behaviour. We will need to tweak the buoyancy. For now buoyancy is calculated using the collision meshes making it a bit messy. We will tweak the model. Open `tethys/model/sdf` and move the collision up by a bit so that the center of buoyancy and center of gravity are different. Apply the following patch to do so. We will now see the model rock back and forth.
 ```diff
 diff --git a/simple_auv/models/tethys/model.sdf b/simple_auv/models/tethys/model.sdf
 index 0437391..be3256c 100644
