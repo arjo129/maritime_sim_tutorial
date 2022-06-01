@@ -23,9 +23,9 @@ sudo apt-get update
 sudo apt-get install ignition-fortress
 ```
 
-Now we will need to start a simulation. Currently as it stands the EC2 instance running this simulation cannot run Ogre2 rendering engine, however GazeboSim allows for changing rendering engines. We will be using the older Ogre1 engine using the flag `--render-engine ogre`
+Now we will need to start a simulation. 
 ```
-ign gazebo shapes.sdf --render-engine ogre
+ign gazebo shapes.sdf
 ```
 ![ogre1_shapes.png](images/ogre1_shapes.png)
 You will now need to have your workspace setup. Change directory into the `ros2_simulation_ws` folder and clone the following repo:
@@ -44,12 +44,10 @@ colcon build
 ```
 Launch the sim using the following command
 ```
-ign gazebo water_world.sdf --render-engine ogre
+ign gazebo water_world.sdf
 ```
 This will launch a simulation like so:
 ![auv_ogre1.png](images/auv_ogre1.png)
-
-> Note: This is running on a cloud instance without a GPU and 3D acceleration hence we have less than optimal colors. Ignition gazebo does support advanced PBR based rendering. You can try this out on your own desktop by installing ignition and running `ign gazebo auv_controls.sdf` which contains a model that is closer to the likeness here: ![image.png](attachment:image.png)
 
 We will now poke around the workspace and see what is there:
 ```
