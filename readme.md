@@ -490,3 +490,7 @@ ros2 run ros_ign_bridge parameter_bridge /model/tethys/joint/propeller_joint/cmd
 
 ```
 Open rqt and command the vehicle forward by sending a command of -31!
+```
+rqt
+```
+![rqt2.png](images/rqt2.png)
