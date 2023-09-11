@@ -246,7 +246,7 @@ ign gazebo water_world.sdf --rendering-engine ogre
 ```
 You should see the world as is. Hit play. We want to be able to control the vehicle. In a new terminal run the following:
 ```
-ign topic -t /model/tethys/joint/propeller_joint/cmd_pos \
+ign topic -t /model/tethys/joint/propeller_joint/cmd_thrust \
    -m ignition.msgs.Double -p 'data: -31'
 ```
 The torpedo should be moving.
