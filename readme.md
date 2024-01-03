@@ -242,7 +242,7 @@ We will now finally get to the part where we can control our auv. The first syst
 Lets build and run it again:
 ```
 colcon build
-ign gazebo water_world.sdf --rendering-engine ogre
+ign gazebo water_world.sdf --render-engine ogre
 ```
 You should see the world as is. Hit play. We want to be able to control the vehicle. In a new terminal run the following:
 ```
